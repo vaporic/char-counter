@@ -25,10 +25,10 @@
             <h1 class="font-bold text-3xl text-gray-900 py-6">Characters Counter</h1>
         </header>
         <main>
-            <textarea v-model="greeting" class="border border-gray-300 h-64 w-full p-3"></textarea>
+            <textarea v-model="textCount" class="border border-gray-300 h-64 w-full p-3"></textarea>
         </main>
         <footer class="flex items-center justify-between">
-            <p class="text-gray-900 font-semibold text-xl py-5"># Characters : ( {{ greeting.length }} )</p>
+            <p class="text-gray-900 font-semibold text-xl py-5"># Characters : ( {{ textCount.length }} )</p>
             <p class="text-sm text-gray-900">By <a href="https://vaporic.github.io/" class="text-blue-400" target="_blank">@vaporic</a></p>
         </footer>
     </div>
@@ -37,7 +37,7 @@
         Vue.createApp({
             data() {
                 return {
-                    greeting: 'Paste your text here...'
+                    textCount: 'Paste your text here...'
                 }
             }
         }).mount('#app');
