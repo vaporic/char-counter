@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="app" class="px-7">
+        <header>
+            <h1 class="font-bold text-3xl text-gray-900 py-6">Characters Counter</h1>
+        </header>
+        <main>
+            <textarea v-model="greeting" class="border border-gray-300 h-64 w-full p-3"></textarea>
+        </main>
+        <footer class="flex items-center justify-between">
+            <p class="text-gray-900 font-semibold text-xl py-5"># Characters : ( {{ greeting.length }} )</p>
+            <p class="text-sm text-gray-900">By <a href="https://vaporic.github.io/" class="text-blue-400" target="_blank">@vaporic</a></p>
+        </footer>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    greeting: 'Paste your text here...'
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
